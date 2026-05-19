@@ -44,9 +44,9 @@ return (
     </div>
 
     {/* Mobile Menu */}
-    
+
     {mobileMenuIsOpen && (
-      <div className="md:hidden bg-slate-950/90 backdrop-blur-sm border-t">
+      <div className="md:hidden bg-slate-900/95 backdrop-blur-lg border-t border-slate-800">
         <div className="px-4 py-2 space-y-2">
           <a href="#features" className="block text-gray-300 hover:text-yellow-500 text-sm lg:text-base">
             Features
