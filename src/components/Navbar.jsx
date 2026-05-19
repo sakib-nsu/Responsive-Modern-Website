@@ -6,7 +6,7 @@ export default function Navbar() {
 
  
 return (
-  <nav className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-slate-950/20 backdrop-blur-sm border-b">
+  <nav className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-slate-950/20 backdrop-blur-sm">
     <div className="max-w-7xl mx-auto px-4 py-3 sm:px-6 lg:px-8">
       <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
         <div className="flex items-center space-x-2 group cursor-pointer">
@@ -46,8 +46,8 @@ return (
     {/* Mobile Menu */}
 
     {mobileMenuIsOpen && (
-      <div className="md:hidden bg-slate-900/95 backdrop-blur-lg border-t border-slate-800">
-        <div className="px-4 py-2 space-y-2">
+      <div className="md:hidden bg-slate-900/95 backdrop-blur-lg border-t border-slate-800 animate-in slide-in-from-top duration-300">
+        <div className="px-4 py-4 sm:py-6 space-y-3 sm:space-y-4">
           <a href="#features" className="block text-gray-300 hover:text-yellow-500 text-sm lg:text-base">
             Features
           </a>
