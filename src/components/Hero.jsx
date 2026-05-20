@@ -1,4 +1,4 @@
-import { ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown, Play, Sparkle, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { codeExamples, floatingCards } from "../data/codeExamples";
@@ -29,6 +29,40 @@ export default function Hero() {
 
           <div className="absolute top-20 left-4 sm:left-10 w-48 sm:w-72 h-48 sm:h-72 bg-blue-900/10 rounded-full blur-3x1 animate-pulse"></div>
           <div className="absolute bottom-20 right-4 sm:right-10 w-64 sm:w-96 h-64 sm:h-96 bg-cyan-900/10 rounded-full blur-3x animate-pulse delay-1000"></div>
+
+          <div className="max-w-7xl mx-auto text-center relative w-full mt-8">
+            <div className="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg;gap-12 items-center relative">
+              <div>
+                <div className="inline-flex items-center space-x-2 px-3 sm:px-4 py-4 sm:py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4 sm:mb-6 animate-in slide-in-from-bottom duration-700 delay-100">
+                  <Sparkles className="w-4 h-4 text-blue-400"></Sparkles>
+                  <span className="text-xs sm:text-sm text-blue-300">Introducing CodeFlow AI</span>
+                </div>
+                <h1 className="text-5xl sm:text-3xl md:text-4xl lg:5xl font-semibold mb-4 sm:mb-6 animate-in-from-bottom duration-700 delay-100 leading-tight">
+                  <span className="bg-gradient-to-b from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent block mb-1 sm:mb-2">Code Faster</span>
+                  <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-100 bg-clip-text text-transparent block mb-1 sm:mb-2">Build Better</span>
+                  <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent block">With CodeFlow AI</span>
+                </h1>
+                  
+                  <p className="text-sm sm:text-base lg:text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-6 sm:mb-8 animate-in slide-in-from-bottom duration-700 delay-200 leading-relaxed">
+                    Accelerate your development workflow with intelligent code
+                    completion, automated testing, and smart debugging. Ship
+                    production-ready code 10x faster
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 animate-in slide-in-from-bottom duration-700 delay-300">
+                    <button className="group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-b from-blue-600 to-blue-400 rounded-lg font-semibold text-sm ">
+                      <span>Start Coding Free</span>
+                      <ArrowRight></ArrowRight>
+                    </button>
+
+                    <button>
+                      <div>
+                        <Play></Play>
+                      </div>
+                      <span>Watch Demo</span>
+                    </button>
+                  </div>
+              </div>
 
           <div className="relative order-2 w-full">
             <div className="relative bg-white/5 backdrop-blur-xl rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-2xl border border-white/10">
@@ -95,15 +129,17 @@ export default function Hero() {
               </div>
              </div>
              {/* Floating Cards */}
-             <div className={`hidden lg:block absolute bottom-4 right-4 transform translate-x-8 translate-y-8 w-72 ${currentFloatingCard.bgColor}`}>
+             <div className={`hidden lg:block absolute bottom-4 right-4 transform translate-x-8 translate-y-8 w-72 ${currentFloatingCard.bgColor} backdrop-blur-xl rounded-lg p-4 border border-white/10 shadow-2xl`}>
               <div className="flex items-center space-x-2 mb-2">
-                <div>{currentFloatingCard.icon}</div>
-                <span>{currentFloatingCard.title}</span>
+                <div className={`w-6 h-6 ${currentFloatingCard.iconColor} flex items-center justify-center text-sm font-bold`}>{currentFloatingCard.icon}</div>
+                <span className={`text-sm font-medium ${currentFloatingCard.textColor}`}>{currentFloatingCard.title}</span>
               </div>
 
-              <div></div>
+              <div className={`text-sm text-left ${currentFloatingCard.contentColor}`}>{currentFloatingCard.content}</div>
              </div>
             </div>
+          </div>
+          </div>
           </div>
         </section>
   );

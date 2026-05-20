@@ -102,5 +102,4 @@ export const floatingCards = {
   title: "Smart Completion",
   content: "AI-powered code suggestions in real-time",
 },
-
 };
