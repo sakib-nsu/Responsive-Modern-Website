@@ -1,7 +1,7 @@
 import { ArrowRight, ChevronDown, Play, Sparkle, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { codeExamples, floatingCards } from "../data/codeExamples";
+import { codeExamples, floatingCards } from "../data/CodeExamples";
 import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 export default function Hero() {
@@ -27,17 +27,17 @@ export default function Hero() {
             background: `radial-gradient(600px circle at ${mouseposition.x}px ${mouseposition.y}px, rgba(59, 130, 246, 0.1), transparent 40%)`
           }}></div>
 
-          <div className="absolute top-20 left-4 sm:left-10 w-48 sm:w-72 h-48 sm:h-72 bg-blue-900/10 rounded-full blur-3x1 animate-pulse"></div>
-          <div className="absolute bottom-20 right-4 sm:right-10 w-64 sm:w-96 h-64 sm:h-96 bg-cyan-900/10 rounded-full blur-3x animate-pulse delay-1000"></div>
+          <div className="absolute top-20 left-4 sm:left-10 w-48 sm:w-72 h-48 sm:h-72 bg-blue-900/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-4 sm:right-10 w-64 sm:w-96 h-64 sm:h-96 bg-cyan-900/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
           <div className="max-w-7xl mx-auto text-center relative w-full mt-8">
-            <div className="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg;gap-12 items-center relative">
+            <div className="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center relative">
               <div>
                 <div className="inline-flex items-center space-x-2 px-3 sm:px-4 py-4 sm:py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4 sm:mb-6 animate-in slide-in-from-bottom duration-700 delay-100">
                   <Sparkles className="w-4 h-4 text-blue-400"></Sparkles>
                   <span className="text-xs sm:text-sm text-blue-300">Introducing CodeFlow AI</span>
                 </div>
-                <h1 className="text-5xl sm:text-3xl md:text-4xl lg:5xl font-semibold mb-4 sm:mb-6 animate-in-from-bottom duration-700 delay-100 leading-tight">
+                <h1 className="text-5xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 sm:mb-6 animate-in-from-bottom duration-700 delay-100 leading-tight">
                   <span className="bg-gradient-to-b from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent block mb-1 sm:mb-2">Code Faster</span>
                   <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-100 bg-clip-text text-transparent block mb-1 sm:mb-2">Build Better</span>
                   <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent block">With CodeFlow AI</span>
